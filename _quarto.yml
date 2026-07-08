@@ -1,0 +1,33 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: Exploratory Data Analysis for Big Data
+  subtitle: A Student Guide for Grading, Coding Style, and Project Milestones  
+  author: Mahmoud Harding
+  chapters: 
+    - index.qmd
+    - intro.qmd
+    - rproj.qmd
+    - rendering.qmd
+    - tags.qmd
+    - coding_style.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+    toc-depth: 5
+  pdf:
+    documentclass: scrreprt
+
+date: today
+    
+number-sections: false
