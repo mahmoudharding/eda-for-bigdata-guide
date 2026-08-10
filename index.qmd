@@ -3,16 +3,16 @@ title: Preface
 editor: source
 ---
 
-:::::: image-row
-::::: columns
+:::: {.columns}
+
 ::: {.column width="50%"}
-![](images/r-logo.png){width="85%"}
+![](images/r-logo.png){width="85%" fig-align="center"}
 :::
 
 ::: {.column width="50%"}
-![](images/python-logo.png){width="65%"}
+![](images/quarto.png){width="85%" fig-align="center"}
 :::
-:::::
-::::::
 
-This resource is intended for students in *Introduction to R and Python for Data Science*. It provides materials and guidance to support understanding the grading rubrics, coding style, and project milestones.
+::::
+
+This resource is intended for students in *Exploratory Data Analysis for Big Data*. It provides materials and guidance to support understanding the grading rubrics, coding style, and project milestones.
