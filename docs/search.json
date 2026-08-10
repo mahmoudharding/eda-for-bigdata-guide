@@ -1,0 +1,162 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Exploratory Data Analysis for Big Data",
+    "section": "",
+    "text": "This resource is intended for students in Exploratory Data Analysis for Big Data. It provides materials and guidance to support understanding the grading rubrics, coding style, and project milestones.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "This resource is intended for students in Exploratory Data Analysis for Big Data. It provides materials and guidance to support success throughout the course, including information about grading rubrics, coding style expectations, assignment requirements, and project milestones.\nThe guide is designed to help students understand how coursework will be evaluated and how to develop clear, readable, and well-documented code in both R and Python. It also outlines expectations for visualizations, written interpretations, and project milestones.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "rproj.html",
+    "href": "rproj.html",
+    "title": "R Project Folder",
+    "section": "",
+    "text": "Setting up Your RProject Folder\nFollow these steps to:\nNote: Following these steps helps avoid file path errors and follows best practices from Martin Chan’s RStudio Projects and Working Directories: A Beginner’s Guide.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>R Project Folder</span>"
+    ]
+  },
+  {
+    "objectID": "rproj.html#setting-up-your-rproject-folder",
+    "href": "rproj.html#setting-up-your-rproject-folder",
+    "title": "R Project Folder",
+    "section": "",
+    "text": "Create an Rproject folder named dsc201.\nCreate a data folder inside the RProject folder.\nDownload a dataset the us_farmers_markets.csv into the data folder.\nDownload the ds201_001-002_a00.Rmd RMarkdown file into the RProject folder.\n\n\n\nStep 1: Create a new RStudio project\n\nOpen RStudio.\nGo to File → New Project…\n\n\n\n\n\nSelect New Directory → New Project.\n\n\n\n\n\nSelect New Project.\n\n\n\n\n\nIn Directory name:, enter dsc201 (all lowercase)\nIn Create project as subdirectory of:, select Browse, then choose a location on your computer (e.g., Documents, Desktop, etc).\n\n\n\n\n\nClick Create Project.\n\nNote: Opening the dsc201.Rproj file will automatically set your working directory to the project’s root folder.\n\n\nStep 2: Create the data folder\nImportant: Name the folder data (all lowercase).\n\nIn RStudio’s Files pane (bottom right), click the New Folder icon.\n\n\n\n\n\nIn Please enter the new folder name, enter data.\nClick OK.\n\nImportant: Name the folder data (all lowercase). Using all lowercase avoids issues on operating systems where Data and data are treated as different folders.\n\n\nStep 3: Download the us_farmers_markets.csv data file\n\nDownload the us_farmers_markets.csv dataset from the course Moodle page.\nLocate it in your browser’s Downloads folder then move it manually into your dsc201/data RProject folder.\nConfirm the file is in the right place by checking in RStudio’s Files pane. You should see it in data/us_farmers_markets.csv.\n\n\n\n\n\n\nStep 4: Download the .Rmd file\n\nDownload the dsc201_001_a00.Rmd RMarkdown file from the course Moodle page.\nLocate it in your browser’s Downloads folder then move it to your dsc201 RProject folder (the root folder, not inside data).\nConfirm the file is in the right place by checking in RStudio’s Files pane. You should see it in dsc201/ds201_001_a00.Rmd.\n\n\n\n\n\n\nStep 5: Always open the .Rproj file\n\nIn your computer’s file explorer, double-click dsc201.Rproj to start each session. This ensures your working directory and relative paths work correctly.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>R Project Folder</span>"
+    ]
+  },
+  {
+    "objectID": "rendering.html",
+    "href": "rendering.html",
+    "title": "Knitting to PDF",
+    "section": "",
+    "text": "Knitting Assignment 00\nIn RStudio, knitting is the process of taking a source document written in R Markdown (.Rmd) and combining the text, code, and code output into a single rendered file, such as HTML, PDF, or Word. When a document is knitted, RStudio runs all code chunks, captures their output (e.g., tables, plots, and summaries), and integrates the results with the written text.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Knitting to PDF</span>"
+    ]
+  },
+  {
+    "objectID": "rendering.html#knitting-to-pdf",
+    "href": "rendering.html#knitting-to-pdf",
+    "title": "Knitting to PDF",
+    "section": "Knitting to PDF",
+    "text": "Knitting to PDF\n\nUsing the YAML Header\nTo knit directly to PDF by default, specify PDF output in the YAML header at the top of your document.\n\n\n\n\n\nUsing the Knit Menu\nTo manually knit a document to PDF:\n\nClick the Knit button in RStudio.\nSelect Knit to PDF from the drop-down menu.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Knitting to PDF</span>"
+    ]
+  },
+  {
+    "objectID": "rendering.html#common-knitting-errors",
+    "href": "rendering.html#common-knitting-errors",
+    "title": "Knitting to PDF",
+    "section": "Common Knitting Errors",
+    "text": "Common Knitting Errors\n\nMissing knitr\nIf you see the following message when attempting to knit\n\nRequired package ‘knitr’ is missing. Would you like to install it?\n\nthe knitr package has not yet been installed on your computer.\nClick Yes and RStudio will automatically install knitr and any required dependencies. Once installation is complete, knitting should begin again automatically.\nIf the document knits successfully, no further action is required.\n\n\nMissing LaTeX\nIf you instead see an error similar to the one below:\n\n\n\n\n\n\nWarning\n\n\n\nError: LaTeX failed to compile RMarkdown.tex. See https://yihui.org/tinytex/r/#debugging for debugging tips. In addition: Warning message: In system2(…, stdout = if (use_file_stdout()) f1 else FALSE, stderr = f2) : ‘“pdflatex”’ not found\nExecution halted No LaTeX installation detected (LaTeX is required to create PDF output). You should install a LaTeX distribution for your platform: https://www.latex-project.org/get/\n\n\nyour computer does not have a LaTeX distribution installed. To create PDF files from R Markdown, you must install a LaTeX distribution such as TinyTeX.\nProceed to the instructions below.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Knitting to PDF</span>"
+    ]
+  },
+  {
+    "objectID": "rendering.html#installing-tinytex-for-pdf-output",
+    "href": "rendering.html#installing-tinytex-for-pdf-output",
+    "title": "Knitting to PDF",
+    "section": "Installing TinyTeX for PDF Output",
+    "text": "Installing TinyTeX for PDF Output\nTo knit R Markdown documents to PDF, your computer needs a LaTeX installation. We recommend TinyTeX because it is lightweight, easy to install, and integrates well with RStudio.\n\nTinyTeX vs. tinytex\n\nTinyTeX\nTinyTeX is a lightweight LaTeX distribution used to compile R Markdown documents into PDF files. It performs the actual PDF creation process.\n\n\ntinytex\ntinytex is an R package that installs and manages TinyTeX from within RStudio.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Knitting to PDF</span>"
+    ]
+  },
+  {
+    "objectID": "rendering.html#steps-to-set-up-tinytex",
+    "href": "rendering.html#steps-to-set-up-tinytex",
+    "title": "Knitting to PDF",
+    "section": "Steps to Set Up TinyTeX",
+    "text": "Steps to Set Up TinyTeX\n\nStep 1: Install the tinytex Package\n\nOpen RStudio.\nIn the Console, run:\n\ninstall.packages(\"tinytex\")\nNote: This installs the tinytex package, which manages the TinyTeX installation.\n\n\nStep 2: Install TinyTeX\n\nIn the Console, run:\n\ntinytex::install_tinytex()\nNote: This command downloads and installs TinyTeX on your computer and may take several minutes.\n\n\nStep 3: Verify the Installation\n\nIn the Console, run:\n\ntinytex::tinytex_root()\nIf the command returns a file path, TinyTeX has been installed successfully.\nExample paths:\n\nmacOS/Linux: \"/usr/local/texlive/...\"\nWindows: \"C:\\\\Users\\\\YourName\\\\AppData\\\\Roaming\\\\TinyTeX\\\\...\"\n\n\n\nStep 4: Knit to PDF\n\nOpen your .Rmd file in RStudio.\nVerify that the YAML header specifies PDF output:\n\n---\ntitle: \"Your Title\"\nauthor: \"Your Name\"\noutput: pdf_document\n---\n\nClick Knit.\nSelect Knit to PDF if prompted.\n\nRStudio will now use TinyTeX to generate a PDF version of your document.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Knitting to PDF</span>"
+    ]
+  },
+  {
+    "objectID": "tags.html",
+    "href": "tags.html",
+    "title": "Tag System Overview",
+    "section": "",
+    "text": "Purpose\nThis section explains the tag system used in grading and feedback for activity assignments, programming assignments, and final project milestones.\nThe goal of this system is to provide transparent, consistent, and instructional feedback that helps you understand how your work was evaluated and how to improve.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tag System Overview</span>"
+    ]
+  },
+  {
+    "objectID": "tags.html#tag-system-overview",
+    "href": "tags.html#tag-system-overview",
+    "title": "Tag System Overview",
+    "section": "Tag System Overview",
+    "text": "Tag System Overview\nAssignment comments may include two kinds of tags:\n\nSeverity tags describe how serious the issue is and determine the point deduction.\nContent tags describe what kind of issue occurred.\n\nTags appear at the start of comments in this format:\n[SEVERITY][CONTENT-TAG]\nFor example:\n[S][CODE-REQ]\nThis means the response has a major issue related to the code that was submitted to answer the question.\n\nSeverity Tags\nSeverity tags indicate the overall impact of an issue on correctness or completion. The severity tag determines the point deduction.\nMultiple content tags may apply to a response, but only one severity level is assigned.\n\n\nContent Tags\nContent tags identify issues related to the completeness, correctness, clarity, interpretation, organization, or communication of a response.\nThe specific content tags available differ by assignment type.\n\n\nMultiple Tags and One Deduction\nMultiple tags may apply to the same response. However, deductions reflect the overall severity of the issue rather than treating each tag as a separate deduction.\nContent tags identify the specific issues present, while the severity tag determines the point deduction.\nFor example, consider the following question:\n\nCalculate the average calories for each restaurant and identify the restaurant with the highest average calories.\n\nA student submits:\nms2022 |&gt; \n  count(restaurant)\nPossible tags:\n[S][CODE-REQ][CODE-RESULT][REQ-INCOMP].\n\n[S] because most required elements are missing or incorrect.\n[CODE-REQ] because the required computation is missing.\n[CODE-RESULT] because the result does not support the analysis requested.\n[REQ-INCOMP] because the question was not fully answered.\n\nAlthough multiple content tags apply, the response receives one severity level based on the overall quality of the answer.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tag System Overview</span>"
+    ]
+  },
+  {
+    "objectID": "coding_style.html",
+    "href": "coding_style.html",
+    "title": "Programming Style Guide",
+    "section": "",
+    "text": "Purpose\nThe purpose for this guide is to help you write clear, readable, and professional code from the start. It draws on recommendations from Pruim et al. (2023), Rossum et al. (2001), and Wickham (2015).",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Programming Style Guide</span>"
+    ]
+  },
+  {
+    "objectID": "coding_style.html#general-guidelines",
+    "href": "coding_style.html#general-guidelines",
+    "title": "Programming Style Guide",
+    "section": "General Guidelines",
+    "text": "General Guidelines\n\nComments\n\nComments start with #\nComments should be sentence case\n\n# Load the data\n\nComments should usually be a short phrase or single sentence that describes the purpose of a block of code. Use additional sentences only to explain non-obvious decisions (e.g., # Keep only data from 2024. Earlier years use a different reporting# system and are not directly comparable.)\n\n\n\nPick clear, descriptive names and a standard naming convention\n\nUse meaningful names (e.g., average_score, not x1)\nUse snake_case for variable and user-defined function names\nAvoid using dots in names (e.g., average.score)\n\n\n\nWrite code in logical blocks\n\nUse blank lines between steps\n\n# Laod the data\ncode\n\n# Clean the data\ncode\ncode\ncode\n\n\nUse consistent spacing\nFor assignment statements and arithmetic expressions.\n\n\n\n\n\n\n\n\n\nLanguage\nGood Example\nBad Example\n\n\n\n\nR\nheight &lt;- feet * 12 + inches\nheight&lt;-feet*12+inches\n\n\nPython\ndf[\"lbs\"] = df[\"kg\"] / 2.204\ndf[\"lbs\"]=df[\"kg\"]/2.204\n\n\n\n\nFor assigning default values or passing keyword arguements.\n\n\n\n\n\n\n\n\n\nLanguage\nGood Example\nBad Example\n\n\n\n\nR\nmean(x, na.rm=TRUE)\nmean(x, na.rm = TRUE)\n\n\nPython\nround(number, ndigits=2)\nround(number, ndigits = 2)\n\n\n\n\n\n\nHandle long lines thoughtfully\n\nKeep lines ≤ 79 chars\nUse parentheses for long expressions\n\ndf |&gt;\n  summarise(\n    Sepal.Length = mean(Sepal.Length),\n    Sepal.Width = mean(Sepal.Width),\n    .by = Species\n  )\nresults = pd.concat(\n    [df1, df2, df3],\n    ignore_index=True,\n    sort=False\n)\n\n\nImport libraries and load packages at the beginning\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nlibrary(tidyverse)\nlibrary(ggplot2)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Programming Style Guide</span>"
+    ]
+  },
+  {
+    "objectID": "coding_style.html#python-specific-style",
+    "href": "coding_style.html#python-specific-style",
+    "title": "Programming Style Guide",
+    "section": "Python-Specific Style",
+    "text": "Python-Specific Style\n\nChain methods when appropriate\ndf.groupby(\"category\").mean()\n\n\nDefine functions clearly\ndef calculate_mean(values):\n    \"\"\"Return the mean of a list of numbers.\"\"\"\n    return sum(values) / len(values)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Programming Style Guide</span>"
+    ]
+  },
+  {
+    "objectID": "coding_style.html#r-specific-style",
+    "href": "coding_style.html#r-specific-style",
+    "title": "Programming Style Guide",
+    "section": "R-Specific Style",
+    "text": "R-Specific Style\n\nUse the Pipe |&gt;\ndata |&gt;\n  filter(score &gt; 80) |&gt;\n  summarise(avg = mean(score))\n\n\nFormat pipes with whitespace\n\nPipes go at end of line\nIndent by 2 spaces\nShort pipes go one a single line iris |&gt; summary()\n\n\n\nFormat ggplot2 code\nggplot(iris, aes(x = Sepal.Width, y = Sepal.Length)) +\n  geom_point() +\n  labs(\n    x = \"Sepal width (cm)\",\n    y = \"Sepal length (cm)\",\n    title = \"Sepal Dimensions by Species\"\n  )\n\n\nUse &lt;- for assignment\nx &lt;- 10\n\n\nFormatting if statements\nscore &lt;- 10 \nif (score &gt; 15) {\n  print(\"High\")\n} else if (score &lt; 15) {\n  print(\"Medium\")\n} else { \n  print(\"Low\")\n}\n\n\n\n\nPruim, Randall, Maria-Cristiana Gı̂rjău, and Nicholas J. Horton. 2023. “Fostering Better Coding Practices for Data Scientists.” Harvard Data Science Review 5 (3). https://doi.org/10.1162/99608f92.97c9f60f.\n\n\nRossum, Guido van, Barry Warsaw, and Alyssa Coghlan. 2001. PEP 8 – Style Guide for Python Code. https://peps.python.org/pep-0008/.\n\n\nWickham, Hadley. 2015. The Tidyverse Style Guide. https://style.tidyverse.org/.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Programming Style Guide</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Pruim, Randall, Maria-Cristiana Gı̂rjău, and Nicholas J. Horton. 2023.\n“Fostering Better Coding Practices for Data Scientists.”\nHarvard Data Science Review 5 (3). https://doi.org/10.1162/99608f92.97c9f60f.\n\n\nRossum, Guido van, Barry Warsaw, and Alyssa Coghlan. 2001. PEP 8 – Style Guide for Python Code. https://peps.python.org/pep-0008/.\n\n\nWickham, Hadley. 2015. The Tidyverse Style Guide. https://style.tidyverse.org/.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>References</span>"
+    ]
+  }
+]
